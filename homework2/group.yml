@@ -1,0 +1,26 @@
+- name: Create groups  
+  ansible.builtin.group:
+    name: "{{ item }}"
+    state: present
+  loop:
+    - devops 
+    - qa
+
+- name: Add elaman to devops group
+  user:
+    name: elaman
+    groups: devops
+    append: yes
+
+- name: Add tim and ann to qa group
+  user:
+     name: "{{ item }}"
+     groups: qa
+     append: yes
+  loop:
+    - tim 
+    - ann
+
+
+
+

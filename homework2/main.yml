@@ -1,0 +1,8 @@
+- hosts: all
+  become: true 
+  tasks: 
+  - name: Create users 
+    include: user.yml
+  - name: Create groups and add users 
+    include: group.yml
+    
