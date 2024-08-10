@@ -1,0 +1,7 @@
+- name: Copy files 
+  ansible.builtin.copy:
+    src: /home/ubuntu/ansible-homework-batch6/homework4/
+    dest: /tmp
+    owner: tim
+    group: devops
+    mode: '0755'

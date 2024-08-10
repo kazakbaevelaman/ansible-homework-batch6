@@ -1,0 +1,5 @@
+- name: Create group  
+  ansible.builtin.group:
+    name: devops
+    state: present
+ 
